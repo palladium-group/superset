@@ -22,6 +22,7 @@ import argentina from './countries/argentina.geojson';
 import australia from './countries/australia.geojson';
 import belgium from './countries/belgium.geojson';
 import bolivia from './countries/bolivia.geojson';
+import botswana from './countries/botswana.geojson';
 import brazil from './countries/brazil.geojson';
 import bulgaria from './countries/bulgaria.geojson';
 import burundi from './countries/burundi.geojson';
@@ -108,6 +109,7 @@ export const countries = {
   australia,
   belgium,
   bolivia,
+  botswana,
   brazil,
   bulgaria,
   burundi,
