@@ -100,13 +100,37 @@ class CeleryConfig(object):
 
 CELERY_CONFIG = CeleryConfig
 
-FEATURE_FLAGS = {"ALERT_REPORTS": True}
+FEATURE_FLAGS = {
+    "ALERT_REPORTS": True,
+    "GENERIC_CHART_AXES" : True
+    }
 ALERT_REPORTS_NOTIFICATION_DRY_RUN = True
 WEBDRIVER_BASEURL = "http://superset:8088/"
 # The base URL for the email report hyperlinks.
 WEBDRIVER_BASEURL_USER_FRIENDLY = WEBDRIVER_BASEURL
 
 SQLLAB_CTAS_NO_LIMIT = True
+
+APP_NAME = "MoH Dashboards"
+APP_ICON = "https://bitbucket.org/ndoh-chisa/infohub-maps/raw/817925b31d7ba68b3307e0383bd5cfd0d9caae0b/Logo.jpg"
+
+LANGUAGES = {
+    'en': {'flag': 'us', 'name': 'English'},
+    'fr': {'flag': 'fr', 'name': 'French'},
+    'zh': {'flag': 'cn', 'name': 'Chinese'},
+}
+
+SECRET_KEY = "+TP3jkwQ9uhPSFxnp7fdj26JouOxqZWWpmipG0K9UK7+VWrL2tjeLa+F"
+
+EXTRA_CATEGORICAL_COLOR_SCHEMES = [
+    {
+        "id": 'tsogoJwameColors',
+        "description": '',
+        "label": 'Tsogo Jwame Colors',
+        "isDefault": True,
+        "colors":
+         ['#00AEEF', '#E05206', '#1E1E1E', '#D6DF21']
+    }]
 
 #
 # Optionally import superset_config_docker.py (which will have been included on
@@ -121,18 +145,3 @@ try:
     )
 except ImportError:
     logger.info("Using default Docker config...")
-
-FEATURE_FLAGS = { 
-    "GENERIC_CHART_AXES" : True 
-    }
-
-APP_NAME = "MoH Dashboards"
-APP_ICON = "https://bitbucket.org/ndoh-chisa/infohub-maps/raw/817925b31d7ba68b3307e0383bd5cfd0d9caae0b/Logo.jpg"
-
-LANGUAGES = {
-    'en': {'flag': 'us', 'name': 'English'},
-    'fr': {'flag': 'fr', 'name': 'French'},
-    'zh': {'flag': 'cn', 'name': 'Chinese'},
-}
-
-SECRET_KEY = "+TP3jkwQ9uhPSFxnp7fdj26JouOxqZWWpmipG0K9UK7+VWrL2tjeLa+F"
